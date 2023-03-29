@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:twemoji_v2/twemoji.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'Flutter Demo',
@@ -29,12 +30,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  final _emojis = '☺️ 🍕 🍔 🌭 👩‍🍳 ✈️ 0️⃣ 1️⃣ 2️⃣ 3️⃣';
+  final _emojis = '☺️ 🍕 🫥 🫠 👩‍🍳 ✈️ 0️⃣ 1️⃣ 2️⃣ 3️⃣';
 
   @override
   void initState() {
     super.initState();
-
     _controller =
         AnimationController(vsync: this, duration: const Duration(seconds: 5))
           ..repeat();
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage>
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               RichText(
                 text: TextSpan(
                   children: [

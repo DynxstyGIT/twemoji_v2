@@ -16,34 +16,30 @@ class Twemoji extends StatelessWidget {
     this.fit,
   }) : super(key: key);
 
-  /// The emoji string
-  ///
-  /// on passing a string with text and emojis it will show the last emoji
-  /// in that string
+  /// The emoji as a string. When multiple emojis are passed, this will
+  /// simply just display the last one.
   final String emoji;
-  final double? height;
-  final double? width;
+
+  /// The dimensions for this emoji.
+  final double? height, width;
 
   /// How to inscribe the image into the space allocated during layout.
-  ///
   /// The default varies based on the other fields. See the discussion at
   /// [paintImage].
   final BoxFit? fit;
 
-  /// The format of the emoji image it can be [TwemojiFormat.png]
-  /// 72*72 png or [TwemojiFormat.svg] svg by default.
-  ///
-  /// Note: svg does'nt works on Flutter html web renderer
+  /// Specifies the way the twemojis get rendered. [TwemojiFormat.png] uses the
+  /// 72x72px PNG, while [TwemojiFormat.svg] uses the corresponding SVG.
   final TwemojiFormat twemojiFormat;
 
   @override
   Widget build(BuildContext context) {
     var cleanEmoji = '';
     emoji.splitMapJoin(
-      regex,
+      TwemojiUtils.emojiRegex,
       onMatch: (m) => cleanEmoji = m.input.substring(m.start, m.end),
     );
-    final unicode = emojiToUnicode(cleanEmoji);
+    final unicode = TwemojiUtils.toUnicode(cleanEmoji);
     if (unicode == '') {
       return const SizedBox.shrink();
     }

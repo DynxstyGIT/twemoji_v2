@@ -34,7 +34,7 @@ class TwemojiTextSpan extends TextSpan {
       fontSize: (textStyle.fontSize ?? 14) * emojiFontMultiplier,
     );
     text.splitMapJoin(
-      regex,
+      TwemojiUtils.emojiRegex,
       onMatch: (m) {
         final emojiStr = m.input.substring(m.start, m.end);
         spans.add(
