@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
+        debugShowCheckedModeBanner: false,
         home: const MyHomePage(),
       );
 }
@@ -53,37 +54,37 @@ class _MyHomePageState extends State<MyHomePage>
                 text: TextSpan(
                   children: [
                      TextSpan(
-                      text: '$_emojis :Device\n',
+                      text: '$_emojis\nDevice\n\n',
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                     TwemojiTextSpan(
                       text:
-                          '$_emojis :Twemoji.png\n',
+                          '$_emojis\nTwemoji.png\n\n',
                       twemojiFormat: TwemojiFormat.png,
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                     TwemojiTextSpan(
-                      text: '$_emojis :Twemoji.svg x 1.3\n',
+                      text: '$_emojis\nTwemoji.svg x 1.3\n\n',
                       twemojiFormat: TwemojiFormat.svg,
                       emojiFontMultiplier: 1.3,
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                     TwemojiTextSpan(
-                      text: '$_emojis  :Twemoji.networkSvg x 1.5\n',
+                      text: '$_emojis\nTwemoji.networkSvg x 1.5\n\n',
                       twemojiFormat: TwemojiFormat.networkSvg,
                       emojiFontMultiplier: 1.5,
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 15,
                       ),
                     ),
                   ],
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage>
                           child: RotationTransition(
                             turns: AlwaysStoppedAnimation(index * 90 / 360),
                             child: const Twemoji(
-                              emoji: '🫶',
+                              emoji: '🍕',
                               height: 50,
                               width: 50,
                             ),
