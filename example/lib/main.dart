@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage>
                 text: TextSpan(
                   children: [
                      TextSpan(
-                      text: '$_emojis\nDevice\n\n',
+                      text: '$_emojis\nDefault Device Emoji\n\n',
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage>
                     ),
                     TwemojiTextSpan(
                       text:
-                          '$_emojis\nTwemoji.png\n\n',
+                          '$_emojis\nTwemojiFormat.png\n\n',
                       twemojiFormat: TwemojiFormat.png,
                       style: const TextStyle(
                         color: Colors.black,
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage>
                       ),
                     ),
                     TwemojiTextSpan(
-                      text: '$_emojis\nTwemoji.svg x 1.3\n\n',
+                      text: '$_emojis\nTwemojiFormat.svg (x1.3)\n\n',
                       twemojiFormat: TwemojiFormat.svg,
                       emojiFontMultiplier: 1.3,
                       style: const TextStyle(
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage>
                       ),
                     ),
                     TwemojiTextSpan(
-                      text: '$_emojis\nTwemoji.networkSvg x 1.5\n\n',
+                      text: '$_emojis\nTwemojiFormat.networkSvg (x1.5)\n\n',
                       twemojiFormat: TwemojiFormat.networkSvg,
                       emojiFontMultiplier: 1.5,
                       style: const TextStyle(
