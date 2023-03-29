@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:twemoji_v2/twemoji.dart';
 
-/// The [TwemojiTextSpan] widget extends [TextSpan]
-/// widget and it can be used in a [RichText] widget
-/// and it also renders text with twitter emojis
+/// A [TextSpan] that renders emojis as twemojis.
 class TwemojiTextSpan extends TextSpan {
   TwemojiTextSpan({
-    TextStyle? style,
     required String text,
+    this.twemojiFormat = TwemojiFormat.svg,
+    TextStyle? style,
     List<TextSpan>? children,
     double emojiFontMultiplier = 1,
-    this.twemojiFormat = TwemojiFormat.svg,
   }) : super(
           style: style,
           children: _parse(style, text, twemojiFormat, emojiFontMultiplier)
