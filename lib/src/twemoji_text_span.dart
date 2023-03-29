@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:twemoji_v2/twemoji.dart';
 
 /// The [TwemojiTextSpan] widget extends [TextSpan]
 /// widget and it can be used in a [RichText] widget
 /// and it also renders text with twitter emojis
 class TwemojiTextSpan extends TextSpan {
-  /// The format of the emoji image it can be [TwemojiFormat.png]
-  /// 72*72 png or [TwemojiFormat.svg] svg by default.
-  final TwemojiFormat twemojiFormat;
-
   TwemojiTextSpan({
     TextStyle? style,
     required String text,
@@ -21,6 +16,10 @@ class TwemojiTextSpan extends TextSpan {
           children: _parse(style, text, twemojiFormat, emojiFontMultiplier)
             ..addAll(children ?? []),
         );
+
+  /// The format of the emoji image it can be [TwemojiFormat.png]
+  /// 72*72 png or [TwemojiFormat.svg] svg by default.
+  final TwemojiFormat twemojiFormat;
 
   static List<InlineSpan> _parse(
     TextStyle? _style,
