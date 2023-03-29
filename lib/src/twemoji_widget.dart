@@ -54,7 +54,7 @@ class Twemoji extends StatelessWidget {
           fit: fit,
           height: width,
           width: height,
-          package: 'twemoji',
+          package: 'twemoji_v2',
         );
       case TwemojiFormat.svg:
         return SvgPicture.asset(
@@ -62,7 +62,7 @@ class Twemoji extends StatelessWidget {
           height: height,
           width: width,
           fit: fit ?? BoxFit.contain,
-          package: 'twemoji',
+          package: 'twemoji_v2',
         );
       case TwemojiFormat.networkSvg:
         return SvgPicture.network(
