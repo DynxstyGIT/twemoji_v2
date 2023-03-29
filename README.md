@@ -5,12 +5,7 @@
 
 Based on [jdecked's fork of twemoji (v14.1.2)](https://github.com/jdecked/twemoji)
 
-<table>
-  <tr>
-    <td><img src="art/1.png" width=270 height=480></td>
-    <td><img src="art/2.png" width=270 height=480></td>
-  </tr>
- </table>
+<img src="art/1.png" width=270 height=480>
 
 ## Usage
 
