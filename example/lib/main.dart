@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage>
                 ),
               ),
               const TwemojiText(
-                text: '💻👩‍💻👨‍💻 :auto format',
+                text: '🫵👩‍💻👨‍💻 :auto format',
                 emojiFontMultiplier: 2,
               ),
               const SizedBox(height: 20),
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage>
                           child: RotationTransition(
                             turns: AlwaysStoppedAnimation(index * 90 / 360),
                             child: const Twemoji(
-                              emoji: '🍕',
+                              emoji: '🫶',
                               height: 50,
                               width: 50,
                             ),
