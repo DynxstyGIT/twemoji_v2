@@ -1,10 +1,10 @@
+/// Specifies the way the twemojis get rendered.
 enum TwemojiFormat {
-  /// SVG form assets
+  /// Uses the corresponding SVG.
   svg,
-
-  /// PNG form assets
-  png,
-
-  /// SVG form Network
+  /// Similar to [svg], but gets the SVG-file from
+  /// https://abs.twimg.com/emoji/v2/svg
   networkSvg,
+  /// Utilizes the 72x72px PNGs.
+  png,
 }
