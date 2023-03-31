@@ -89,5 +89,5 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 
-# twemoji:
+# twemoji_v2:
 #   includes: '👩‍👩‍👧‍👧👏👍'

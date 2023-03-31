@@ -3,7 +3,7 @@
 import 'dart:io';
 import 'package:characters/src/extensions.dart';
 import 'package:io/io.dart';
-import 'package:twemoji_v2/twemoji_v2.dart';
+import 'package:twemoji_v2/src/utils.dart';
 import 'package:yaml/yaml.dart';
 
 Future<void> main(List<String> args) async {
@@ -29,7 +29,7 @@ Future<void> main(List<String> args) async {
   // Move all assets to an all_assets backup folder.
   await copyPath(assetsPath, allAssetsPath);
 
-  final String? includedEmojis = (pubspecYaml['twemoji'] ?? {})['includes'];
+  final String? includedEmojis = (pubspecYaml['twemoji_v2'] ?? {})['includes'];
 
   // If there is no twemoji includes config property then all assets
   // should be included.
