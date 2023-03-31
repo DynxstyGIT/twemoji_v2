@@ -1,3 +1,6 @@
+# 0.5.2
+- Removed 'Include specific emojis' functionality - See https://github.com/DynxstyGIT/twemoji_v2/pull/3#issuecomment-1492372253 for more info
+
 # 0.5.1
 - Upgraded `flutter_svg` to `^2.0.4`
 - Fixed image on README.md
