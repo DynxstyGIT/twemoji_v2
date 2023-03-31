@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twemoji_v2/twemoji.dart';
 
+import 'fitzpatrick_type.dart';
+
 /// A text widget which renders emojis as twemojis. This utilizes [Text.rich] in
 /// combination with [TwemojiTextSpan].
 class TwemojiText extends StatelessWidget {
@@ -9,6 +11,7 @@ class TwemojiText extends StatelessWidget {
     required this.text,
     this.emojiFontMultiplier = 1.0,
     this.twemojiFormat = TwemojiFormat.svg,
+    this.fitzpatrickTypes = FitzpatrickType.values,
     this.style,
     this.strutStyle,
     this.textAlign,
@@ -33,6 +36,11 @@ class TwemojiText extends StatelessWidget {
   /// Specifies the way the twemojis get rendered. [TwemojiFormat.png] uses the
   /// 72x72px PNG, while [TwemojiFormat.svg] uses the corresponding SVG.
   final TwemojiFormat twemojiFormat;
+
+  /// A list with allowed fitzpatrick types. This contains all types by default.
+  /// If an emoji uses a fitzpatrick type that is not in this list, it will
+  /// fall back to it's default, yellow, variation.
+  final List<FitzpatrickType> fitzpatrickTypes;
 
   /// The [TextStyle] to use.
   /// This is directly passed into the [Text.rich] widget.
@@ -93,6 +101,7 @@ class TwemojiText extends StatelessWidget {
           text: text,
           emojiFontMultiplier: emojiFontMultiplier,
           twemojiFormat: twemojiFormat,
+          fitzpatrickTypes: fitzpatrickTypes
         ),
         style: style,
         strutStyle: strutStyle,

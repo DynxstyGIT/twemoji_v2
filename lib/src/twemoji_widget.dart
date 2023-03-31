@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:twemoji_v2/src/fitzpatrick_type.dart';
 import 'package:twemoji_v2/twemoji.dart';
 
 /// returns an image of an emoji
@@ -12,8 +13,9 @@ class Twemoji extends StatelessWidget {
     required this.emoji,
     this.height,
     this.width,
-    this.twemojiFormat = TwemojiFormat.svg,
     this.fit,
+    this.twemojiFormat = TwemojiFormat.svg,
+    this.fitzpatrickTypes = FitzpatrickType.values
   }) : super(key: key);
 
   /// The emoji as a string. When multiple emojis are passed, this will
@@ -32,6 +34,11 @@ class Twemoji extends StatelessWidget {
   /// 72x72px PNG, while [TwemojiFormat.svg] uses the corresponding SVG.
   final TwemojiFormat twemojiFormat;
 
+  /// A list with allowed fitzpatrick types. This contains all types by default.
+  /// If an emoji uses a fitzpatrick type that is not in this list, it will
+  /// fall back to it's default, yellow, variation.
+  final List<FitzpatrickType> fitzpatrickTypes;
+
   @override
   Widget build(BuildContext context) {
     var cleanEmoji = '';
@@ -39,9 +46,16 @@ class Twemoji extends StatelessWidget {
       TwemojiUtils.emojiRegex,
       onMatch: (m) => cleanEmoji = m.input.substring(m.start, m.end),
     );
-    final unicode = TwemojiUtils.toUnicode(cleanEmoji);
+    var unicode = TwemojiUtils.toUnicode(cleanEmoji);
     if (unicode == '') {
       return const SizedBox.shrink();
+    }
+    if (TwemojiUtils.isFitzpatrick(unicode)) {
+      for (final type in FitzpatrickType.values) {
+        if (!fitzpatrickTypes.contains(type)) {
+          unicode = unicode.replaceAll('-${type.unicode}', '');
+        }
+      }
     }
     switch (twemojiFormat) {
       case TwemojiFormat.png:
