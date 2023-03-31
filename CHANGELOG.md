@@ -1,3 +1,8 @@
+# 0.5.1
+- Upgraded `flutter_svg` to `^2.0.4`
+- Fixed image on README.md
+- Reformatted code
+
 # 0.5.0
 - Upgraded to Twemoji 14.1.2
 - Switched from `RichText` to `Text.rich` for `TwemojiText` (to, e.g., respect the devices' `textScaleFactor`)
