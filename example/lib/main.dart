@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage>
                           alignment: _getAlign(index),
                           child: RotationTransition(
                             turns: AlwaysStoppedAnimation(index * 90 / 360),
-                            child: const TwemojiImage(
+                            child: const Twemoji(
                               emoji: '🍕',
                               height: 50,
                               width: 50,

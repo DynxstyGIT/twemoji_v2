@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:twemoji_v2/src/fitzpatrick_type.dart';
 import 'package:twemoji_v2/twemoji.dart';
 
 /// returns an image of an emoji
 ///
 /// The format of the emoji image it can be [TwemojiFormat.png]
 /// 72*72 png or [TwemojiFormat.svg] svg by default.
-class TwemojiImage extends StatelessWidget {
-  const TwemojiImage({
+class Twemoji extends StatelessWidget {
+  const Twemoji({
     Key? key,
     required this.emoji,
     this.height,

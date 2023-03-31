@@ -50,7 +50,7 @@ class TwemojiTextSpan extends TextSpan {
                 padding: EdgeInsets.symmetric(
                     horizontal: emojiStyle.letterSpacing ?? 1,
                     vertical: emojiStyle.height ?? 2),
-                child: TwemojiImage(
+                child: Twemoji(
                   emoji: emojiStr,
                   twemojiFormat: twemojiFormat,
                   fitzpatrickTypes: fitzpatrickTypes,
