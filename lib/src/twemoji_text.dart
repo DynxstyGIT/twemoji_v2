@@ -96,11 +96,12 @@ class TwemojiText extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Text.rich(
         TwemojiTextSpan(
-            text: text,
-            emojiFontMultiplier: emojiFontMultiplier,
-            twemojiFormat: twemojiFormat,
-            fitzpatrickTypes: fitzpatrickTypes),
-        style: style,
+          text: text,
+          emojiFontMultiplier: emojiFontMultiplier,
+          twemojiFormat: twemojiFormat,
+          fitzpatrickTypes: fitzpatrickTypes,
+          style: style,
+        ),
         strutStyle: strutStyle,
         textAlign: textAlign,
         textDirection: textDirection,
