@@ -3,6 +3,9 @@
 
 Based on [jdecked's fork of twemoji (v15.1.0)](https://github.com/jdecked/twemoji)
 
+> [!NOTE]
+> This package was renamed to `flutter_twemoji`. This will receive no further updates. Please use the new package name.
+
 <img src="https://raw.githubusercontent.com/jasonlessenich/twemoji_v2/main/art/1.png" width=270>
 
 ## Usage
