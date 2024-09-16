@@ -1,15 +1,18 @@
-# twemoji_v2
-> Originally maintained by [hadi-codes](https://github.com/hadi-codes), extended to support the newest set of twemoji.
+# twemoji_v2 - Twemoji for Flutter!
+> Originally maintained by [hadi-codes](https://github.com/hadi-codes), extended to support Twemoji 15.1.0!
 
-[Twemoji](https://twemoji.twitter.com/) for Flutter, supports SVG and 72x72px PNG emojis
+Based on [jdecked's fork of twemoji (v15.1.0)](https://github.com/jdecked/twemoji)
 
-Based on [jdecked's fork of twemoji (v14.1.2)](https://github.com/jdecked/twemoji)
+> [!IMPORTANT]
+> This package was renamed to `flutter_twemoji`. This will receive no further updates. Please use the new package name.
 
-<img src="https://raw.githubusercontent.com/DynxstyGIT/twemoji_v2/main/art/1.png" width=270>
+<img src="https://raw.githubusercontent.com/jasonlessenich/twemoji_v2/main/art/1.png" width=270>
 
 ## Usage
 
-**Twemoji** to display single emojis
+### Display a Single Emoji
+
+Use the **Twemoji** Widget to display individual emojis.
 
 ```dart
 Twemoji(
@@ -19,15 +22,19 @@ Twemoji(
 )
 ```
 
-**TwemojiText** returns a widget with rendered text with twitter emojis
+### Render Text with Emojis
+
+The **TwemojiText** Widget allows you to render text with embedded Twemoji.
 
 ```dart
 TwemojiText(
-  text: 'wow 💻👩‍💻👨‍💻 ',
-),
+  text: 'Flutter is awesome 🎉',
+)
 ```
 
-**TwemojiTextSpan** with **RichText** and it will render the text with twitter Emojies
+### Rich Text with Emojis
+
+Combine the **TwemojiTextSpan** with **RichText** to create rich text content with emojis.
 
 ```dart
 RichText(

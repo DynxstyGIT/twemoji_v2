@@ -1,3 +1,7 @@
+# 0.6.0
+- Upgraded to Twemoji 15.1.0 (https://github.com/jasonlessenich/twemoji_v2/pull/5)
+- Deprecated TwemojiType#networkSvg as Twitter no longer maintains Twemoji
+
 # 0.5.3
 - Fixed an issue where `TwemojiText` wouldn't respect the specified `TextStyle`
 
