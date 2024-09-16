@@ -1,6 +1,5 @@
 # 0.6.0
 - Upgraded to Twemoji 15.1.0 (https://github.com/jasonlessenich/twemoji_v2/pull/5)
-- Updated README
 - Deprecated TwemojiType#networkSvg as Twitter no longer maintains Twemoji
 
 # 0.5.3
