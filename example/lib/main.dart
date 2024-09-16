@@ -77,15 +77,6 @@ class _MyHomePageState extends State<MyHomePage>
                         fontSize: 15,
                       ),
                     ),
-                    TwemojiTextSpan(
-                      text: '$_emojis\nTwemojiFormat.networkSvg (x1.5)\n\n',
-                      twemojiFormat: TwemojiFormat.networkSvg,
-                      emojiFontMultiplier: 1.5,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
                   ],
                 ),
               ),
